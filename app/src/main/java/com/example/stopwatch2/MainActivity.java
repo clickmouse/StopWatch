@@ -30,7 +30,7 @@ public class MainActivity extends AppCompatActivity {
         btntwo = AnimationUtils.loadAnimation(this,R.anim.btntwo);
         imageView.startAnimation(animation);
         text1.startAnimation(btngone);
-        text1.startAnimation(btngone);
+        text2.startAnimation(btngone);
         button.startAnimation(btntwo);
         button.setOnClickListener(new View.OnClickListener() {
             @Override

@@ -1,11 +1,13 @@
 package com.example.stopwatch2;
 
+import android.graphics.Interpolator;
 import android.os.SystemClock;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
+import android.view.animation.LinearInterpolator;
 import android.widget.Button;
 import android.widget.Chronometer;
 import android.widget.ImageView;
@@ -25,6 +27,7 @@ public class StopWatch extends AppCompatActivity {
         btnstop = findViewById(R.id.btnstop);
         time = findViewById(R.id.time);
         round = AnimationUtils.loadAnimation(this,R.anim.round);
+        round.setInterpolator(new LinearInterpolator());
         btnstop.setAlpha(0);
         btnstart.setOnClickListener(new View.OnClickListener() {
             @Override
